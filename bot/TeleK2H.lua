@@ -205,12 +205,18 @@ function create_config( )
   config = {
     enabled_plugins = {
     "onservice",
+    "admin",
+    "addsudo",
     "inrealm",
     "ingroup",
     "inpm",
     "banhammer",
     "stats",
     "anti_spam",
+    "antitag",
+    "antilink",
+    "lock_join",
+    "xamar",
     "owners",
     "arabic_lock",
     "set",
@@ -218,139 +224,273 @@ function create_config( )
     "broadcast",
     "download_media",
     "invite",
-    "all"
+    "leave_ban",
+    "spammer",
+    "sp",
+    "salam",
+    "fosh",
+    "wiki",
+    "echo",
+    "feedback",
+    "qr",
+    "joke",
+    "tex",
+    "calc",
+    "tosupport",
+    "google",
+    "weather",
+    "welcome",
+    "plugins",
+    "all",
     },
     sudo_users = {58263760},--Sudo users
     disabled_channels = {},
     realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v1
-An advance Administration bot based on yagop/telegram-bot 
+    about_text = [[⚡️ K2H Anti Spam Bot v1.5
+    
+  📢 Channel : @K2HBotch
+  👤 Admin : @kavian1381
+  
 
-https://github.com/SEEDTEAM/TeleSeed
+]],
+    help_text_realm = [[
+    
+📝 لیست دستورات Realm :
 
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@seyedan25 [Manager]
+✏️ ساخت یک گروه جدید
+!creategroup [نام گروه]
 
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
+🖍 ساخت یک گروه Realm جدید
+!createrealm [نام گروه]
 
-Our channels
-@teleseedch [English]
+✏️ تغییر نام گروه Realm
+!setname [نام مورد نظر]
+
+🚫 حذف تمام کاربران یک گروه
+!kickall [آی دی گروه مورد نظر]
+
+🏳 تغییر توضیحات یک گروه
+!setabout [کد گروه] [متن]
+
+🏳 تغییر قوانین یک گروه
+!setrules [کد گروه] [متن]
+
+🏳 قفل تنظیمات یک گروه
+!lock [کد گروه] [bots|name...]
+
+🏳 باز کردن قفل تنظیمات یک گروه
+!unlock [کد گروه] [bots|name...]
+
+📝 مشاهده نوع گروه (گروه یا Realm)
+!type
+
+📝 دریافت لیست کاربران (متن)
+!wholist
+
+📝 دریافت لیست کاربران (فایل)
+!who
+
+🚫 حذف کاربران و پاک کردن گروه
+!kill chat [کد گروه]
+
+🚫 حذف کاربران و پاک کردن Realm
+!kill realm [کد ریالیم]
+
+👥 افزودن ادمین به ربات
+!addadmin [نام کاربری|یوزر آی دی]
+
+👥 حذف کردن ادمین از ربات
+!removeadmin [نام کاربری|یوزر آی دی]
+
+🌐 دریافت لیست گروه ها
+!list groups
+
+🌐 دریافت لیست Realm ها
+!list realms
+
+🗯 دریافت لاگ Realm
+!log
+
+📢 ارسال پیام به همه گروه ها
+!broadcast [متن پیام]
+
+📢 ارسال پیام به یک گروه خاص
+!bc [کد گروه] [متن پیام]
+
+🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
+
+⚠️  شما ميتوانيد از ! و / استفاده کنيد. 
+
+⚠️ تنها مدیران ربات و سودو ها
+میتوانند جزییات مدیریتی سایر گروه
+های ربات را ویرایش یا حذف نمایند.
+
+⚠️  تنها سودو ربات میتواند
+گروهی را بسازد یا حذف کند.
+
+🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
+
 ]],
     help_text = [[
-Commands list :
+    
+📝 ليست دستورات مدیریت گروه :
 
-!kick [username|id]
-You can also do it by reply
+🚫 حذف کردن کاربر
+!kick [یوزنیم/یوزر آی دی]
 
-!ban [ username|id]
-You can also do it by reply
+🚫 کردن کاربر ( حذف برای همیشه )
+!ban [یوزنیم/یوزر آی دی]
 
-!unban [id]
-You can also do it by reply
+🚫 حذف بن کاربر ( آن بن )
+!unban [یوزر آی دی]
 
-!who
-Members list
-
-!modlist
-Moderators list
-
-!promote [username]
-Promote someone
-
-!demote [username]
-Demote someone
-
+🚫 حذف خودتان از گروه
 !kickme
-Will kick user
 
+🚫 حذف کاربران غیر فعال
+!kickinactive
+
+👥 دريافت ليست مديران گروه
+!modlist
+
+👥 افزودن یک مدیر به گروه
+!promote [یوزنیم]
+
+👥 حذف کردن یک مدير
+!demote [یوزنیم]
+
+📃 توضيحات گروه
 !about
-Group description
 
-!setphoto
-Set and locks group photo
-
-!setname [name]
-Set group name
-
+📜 قوانين گروه
 !rules
-Group rules
 
+🌅 انتخاب و قفل عکس گروه
+!setphoto
+
+🔖 انتخاب نام گروه
+!setname [نام مورد نظر]
+
+📜 انتخاب قوانين گروه
+!set rules [متن قوانین]
+
+📃 انتخاب توضيحات گروه
+!set about [متن مورد نظر]
+
+🔒 قفل اعضا ، نام گروه ، ربات و ...
+!lock [member|name|bots|tag|link|fosh|join|arabic|english]
+
+🔓 باز کردن قفل اعضا ، نام گروه و ...
+!unlock [member|name|bots|tag|link|fosh|join|arabic|english]
+
+📥 دريافت یوزر آی دی گروه يا کاربر
 !id
-return group id or user id
 
+⚙ دریافت تنظیمات گروه 
+!settings
+
+📌 ساخت / تغيير لينک گروه
+!newlink
+
+📌 دريافت لينک گروه
+!link
+
+📌 دريافت لينک گروه در پی وی
+!linkpv
+
+🛃 انتخاب مدير اصلی گروه
+!setowner [یوزر آی دی]
+
+🔢 تغيير حساسيت ضد اسپم
+!setflood [5-20]
+
+✅ دريافت ليست اعضا گروه
+!who
+
+✅ دريافت آمار در قالب متن
+!stats
+
+〽️ سيو کردن يک متن
+!save [value] <text>
+
+〽️ دريافت متن سيو شده
+!get [value]
+
+❌ حذف قوانين ، مديران ، اعضا و ...
+!clean [modlist|rules|about]
+
+♻️ دريافت يوزر آی دی یک کاربر
+!res [یوزنیم]
+
+🚸 دريافت گزارشات گروه
+!log
+
+🚸 دريافت ليست کاربران بن شده
+!banlist
+
+🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
+
+📝 ليست دستورات ابزار ها :
+
+😂 ارسال جک های خفن
+!joke
+
+🌀 تکرار متن مورد نظر شما
+!echo [متن]
+
+🎤 فعال کردن قابلیت چت با ربات
+!plugins + chat group
+
+🎤 غیر فعال کردن قابلیت چت با ربات
+!plugins - chat group
+
+🃏 ساخت عکس نوشته
+!tex [متن]
+
+🃏 ساخت بارکد QR
+!qr [متن]
+
+⌨ انجام محاسبات ریاضی
+!calc 2+8
+
+🌐 جستجو در ویکی پديا انگلیسی
+!wiki [متن]
+
+🌐 جستجو در ویکی پديا فارسی
+!wikifa [متن]
+
+🌐 جستجو در گوگل
+!google [متن]
+
+☀️ هواشناسی و وضعیت هوا
+!weather [نام شهر]
+
+
+
+👤 اضافه کردن ادمین ربات به گروه
+!addsudo
+
+
+💬 راهنمای ربات (همین متن)
 !help
 
-!lock [member|name|bots]
-Locks [member|name|bots] 
-
-!unlock [member|name|photo|bots]
-Unlocks [member|name|photo|bots]
-
-!set rules <text>
-Set <text> as rules
-
-!set about <text>
-Set <text> as about
-
-!settings
-Returns group settings
-
-!newlink
-create/revoke your group link
-
-!link
-returns group link
-
-!owner
-returns group owner id
-
-!setowner [id]
-Will set id as owner
-
-!setflood [value]
-Set [value] as flood sensitivity
-
-!stats
-Simple message statistics
-
-!save [value] <text>
-Save <text> as [value]
-
-!get [value]
-Returns text of [value]
-
-!clean [modlist|rules|about]
-Will clear [modlist|rules|about] and set it to nil
-
-!res [username]
-returns user id
-"!res @username"
-
-!log
-will return group logs
-
-!banlist
-will return group ban list
-
-**U can use both "/" and "!" 
+عکس گرفتن از صفحه یک وبسایت
+!webshot [آدرس مورد نظر]
+🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
 
 
-*Only owner and mods can add bots in group
 
+⚠️  شما ميتوانيد از ! و / استفاده کنيد. 
 
-*Only moderators and owner can use kick,ban,unban,newlink,link,setphoto,setname,lock,unlock,set rules,set about and settings commands
+⚠️  تنها مديران ميتوانند ربات ادد کنند. 
 
-*Only owner can use res,setowner,promote,demote and log commands
+⚠️  تنها معاونان و مديران ميتوانند 
+جزييات مديريتی گروه را تغيير دهند.
+
+🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹🔹
 
 ]]
-
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
