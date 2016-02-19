@@ -1,4 +1,4 @@
-# [TeleSeed](https://telegram.me/TeleSeed) 
+# [TeleK2H](https://telegram.me/mentor81/TeleK2H) 
 **An advance and powerful Administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under [GNU General public License](https://github.com/SEEDTEAM/TeleSeed/blob/master/LICENSE)**
 # Features
 
@@ -399,4 +399,4 @@ For graphic designs
 
 [Siyanew](https://github.com/Siyanew) ([Telegram](https://telegram.me/Siyanew))
 
-Our cahnnel > [@TeleSeedCH](https://telegram.me/teleseedch)
+Our cahnnel > [@TeleSeedCH](https://telegram.me/TeleK2Hch)
