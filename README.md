@@ -25,7 +25,7 @@
 ### Group creation
 >/creategroup [group name]
 >
->>/creategroup SEED
+>>/creategroup K2H
 >>>will create a group
 >>>
 >>>_Only works in realms But sudo users can use it everywhere_
